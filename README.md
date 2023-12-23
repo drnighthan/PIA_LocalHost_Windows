@@ -22,39 +22,12 @@ PIA is a personalized image animation method which can generate videos with **hi
 - Online Demo on [OpenXLab](https://openxlab.org.cn/apps/detail/zhangyiming/PiaPia)
 - Checkpoint on [Google Drive](https://drive.google.com/file/d/1RL3Fp0Q6pMD8PbGPULYUnvjqyRQXGHwN/view?usp=drive_link) or [![Open in OpenXLab](https://cdn-static.openxlab.org.cn/header/openxlab_models.svg)](https://openxlab.org.cn/models/detail/zhangyiming/PIA)
 
-## Setup
-### Prepare Environment
-```
-conda env create -f environment.yaml
-conda activate pia
-```
-
-### Download checkpoints
-<li>Download the Stable Diffusion v1-5</li>
-
-```
-git lfs install
-git clone https://huggingface.co/runwayml/stable-diffusion-v1-5 models/StableDiffusion/
-```
-
-<li>Download Personalized Models</li>
-
-```
-bash download_bashscripts/1-RealisticVision.sh
-bash download_bashscripts/2-RcnzCartoon.sh
-bash download_bashscripts/3-MajicMix.sh
-```
-
-<li>Download PIA</li>
-
-```
-bash download_bashscripts/0-PIA.sh
-```
-
-
-You can also download *pia.ckpt* through this link on [Google Drive](https://drive.google.com/file/d/1RL3Fp0Q6pMD8PbGPULYUnvjqyRQXGHwN/view?usp=drive_link)
-
-Put checkpoints as follows:
+## Setup of Local Host in Windows)
+### 1.local_Install_cn.ps1 (1.local_Install.ps1 if you not in China)
+run 1.local_Install_cn.ps1 in PowerShell, it will create venv for PIA
+### 2.downloading_model.ps1
+run 2.downloading_model.ps1 to download the PIA ckpt and StableDiffusion
+if it dosen't work,please put checkpoints as follows:
 ```
 └── models
     ├── DreamBooth_LoRA
@@ -66,8 +39,12 @@ Put checkpoints as follows:
         ├── unet
         └── ...
 ```
+### 2.1.mklink_of_SDwebUI(optional).ps1
+If you already have SDwebUI, you can run this code to link the ckpt path of SDwebUI with the PIA ckpt path.
 
 ## Usage
+### 3.local_run.ps1
+
 ### Image Animation
 Image to Video result can be obtained by:
 ```
