@@ -26,8 +26,8 @@ PIA is a personalized image animation method which can generate videos with **hi
 ### 1.local_Install_cn.ps1 (1.local_Install.ps1 if you not in China)
 run 1.local_Install_cn.ps1 in PowerShell, it will create venv for PIA
 ### 2.downloading_model.ps1
-run 2.downloading_model.ps1 to download the PIA ckpt and StableDiffusion
-if it dosen't work,please put checkpoints as follows:
+run 2.downloading_model.ps1 to download the PIA ckpt and StableDiffusion.
+If it dosen't work,please put checkpoints by yourself as follows:
 ```
 └── models
     ├── DreamBooth_LoRA
@@ -40,7 +40,7 @@ if it dosen't work,please put checkpoints as follows:
         └── ...
 ```
 ### 2.1.mklink_of_SDwebUI(optional).ps1
-If you already have SDwebUI, you can run this code to link the ckpt path of SDwebUI with the PIA ckpt path.
+If you already have SDwebUI, you can run this code to link the ckpt/lora path of SDwebUI with the PIA ckpt/lora path.
 
 ## Usage
 ### 3.local_run.ps1
